@@ -1,0 +1,21 @@
+{
+    "name": "scanner-test",
+    "packageManager": "yarn@4.0.0-rc.48",
+    "scripts": {
+        "start": "ts-node code/index.ts",
+        "build": "shx mkdir -p dist && shx touch dist/index.js && shx rm -rf dist/* && parcel build --no-optimize --no-source-maps --no-content-hash"
+    },
+    "devDependencies": {
+        "@types/node": "^20.5.0",
+        "parcel": "^2.9.3",
+        "shx": "^0.3.4",
+        "ts-node": "^10.9.1",
+        "typescript": "^5.1.6"
+    },
+    "targets": {
+        "default": {
+            "source": "code/index.ts",
+            "context": "node"
+        }
+    }
+}
